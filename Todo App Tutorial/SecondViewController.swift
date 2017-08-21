@@ -10,6 +10,18 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBAction func saveClicked(_ sender: UIButton) {
+        
+        let textVal = textField.text;
+        if(textVal != ""){
+            rowList.append(textVal!);
+            textField.text = "";
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
